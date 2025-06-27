@@ -3,6 +3,28 @@
 #include<util/delay.h>
 #include "shift_register.h"	
 
+/*
+		   SHIFT REGISTER 74HC595N
+		       +------------+
+		B   <= |QB       VCC| =>   VCC
+		C   <= |QC        QA| =>   A
+		D   <= |QD        SI| =>   PD2
+		E   <= |QE        ~G| =>   GND
+		F   <= |QF       RCK| =>   PD1
+		G   <= |QG       SCK| =>   PD0
+		H   <= |QH     ~SCLR| =>   VCC
+		GND <= |GND      QH'| 
+		       +------------+
+			   
+				   SEVEN-SEGMENT DISPLAY
+		+-------------------------------------------------------+
+		| VCC  D1  D2  D3  D4   A   B   C   D   E   F   G   DP  |
+		+-------------------------------------------------------+
+		   |    |   |   |   |   |   |   |   |   |   |   |    |
+		  VCC  D1  D2  D3  D4  QA  QB  QC  QD  QE  QF  QG   QH
+		
+*/
+
 const uint8_t segment_map[10] = {
 	0b11000000,	//0
 	0b11111001,	//1
