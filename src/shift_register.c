@@ -16,12 +16,12 @@
 		GND <= |GND      QH'| 
 		       +------------+
 			   
-				   SEVEN-SEGMENT DISPLAY
+				     SEVEN-SEGMENT DISPLAY
 		+-------------------------------------------------------+
-		| VCC  D1  D2  D3  D4   A   B   C   D   E   F   G   DP  |
+		| VCC  D1   D2   D3   D4   A   B   C   D   E   F   G   DP  |
 		+-------------------------------------------------------+
-		   |    |   |   |   |   |   |   |   |   |   |   |    |
-		  VCC  D1  D2  D3  D4  QA  QB  QC  QD  QE  QF  QG   QH
+		   |    |    |    |    |   |   |   |   |   |   |   |    |
+		  VCC  PE1  PE2  PE3  PE4  QA  QB  QC  QD  QE  QF  QG   QH
 		
 */
 
