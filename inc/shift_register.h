@@ -6,27 +6,35 @@
 #define DIGIT_PORT PORTE
 #define DIGIT_DDR DDRE
 
-#define DATA_PORT PORTD
-#define DATA_DDR DDRD
-#define DATA_PIN PD2
-
-#define CLOCK_PORT PORTD
-#define CLOCK_DDR DDRD
-#define CLOCK_PIN PD0
-
-#define LATCH_PORT PORTD
-#define LATCH_DDR DDRD
-#define LATCH_PIN PD1
-
 #define DIGIT0_PIN PE0
 #define DIGIT1_PIN PE1
 #define DIGIT2_PIN PE2
 #define DIGIT3_PIN PE3
 
+#define DATA_PORT PORTB
+#define DATA_DDR DDRB
+#define DATA_PIN PB2
+
+#define CLOCK_PORT PORTB
+#define CLOCK_DDR DDRB
+#define CLOCK_PIN PB0
+
+#define LATCH_PORT PORTB
+#define LATCH_DDR DDRB
+#define LATCH_PIN PB1
+
+#define DP_BIT 7
+
+extern const uint8_t segment_map[11];
+
+extern uint8_t sevenSegmentDigits[4];      
+extern int8_t sevenSegmentDotPosition;    
+
 void shiftOut(uint8_t data);
 void shiftRegisterInit(void);
-void selectDigit(uint8_t digit);
-void displayNumber(uint16_t number);
-void displayNumberWithDot(uint16_t number, uint8_t dot_position);
+void selectDigit(uint8_t digit_index);
+void displayMultiplexedNumber(void);
+void setSevenSegmentNumber(int32_t number, int8_t dot_pos);
+void clearSevenSegments(void);
 
 #endif
