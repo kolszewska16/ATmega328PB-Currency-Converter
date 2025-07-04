@@ -3,21 +3,15 @@
 
 #include <avr/io.h>
 
-//columns
-#define KEYPAD_C_PORT PORTB
-#define KEYPAD_C_DDR DDRB
-#define KEYPAD_C_PIN PINB
-
-//rows
-#define KEYPAD_R_PORT PORTD
-#define KEYPAD_R_DDR DDRD
-#define KEYPAD_R_PIN PIND
+#define KEYPAD_PORT PORTD
+#define KEYPAD_DDR DDRD
+#define KEYPAD_PIN PIND
 
 //columns
-#define C1_PIN PB0
-#define C2_PIN PB1
-#define C3_PIN PB2
-#define C4_PIN PB3
+#define C1_PIN PD0
+#define C2_PIN PD1
+#define C3_PIN PD2
+#define C4_PIN PD3
 
 //rows
 #define R1_PIN PD4
